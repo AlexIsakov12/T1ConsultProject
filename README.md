@@ -2,8 +2,11 @@
 ## Работа с Git 
 ### Клонирование проекта
 1. На странице репозитория нажмите на зеленую кнопку **"Code"**
+![](src/main/resources/static/images/select-code.png)
 2. В выпадающем окне скопируйте ссылку на репозиторий
+![](src/main/resources/static/images/copy-link.png)
 3. Перейдите в **Intellij IDEA -> вкладка File -> New -> Get From Version Control** -> в поле URL вставьте скопированную вами ссылку на репозиторий и нажмите **"Clone"**.
+![](src/main/resources/static/images/get-from-version-control.png)
 
 ## Работа с проектом
 ### Настройка проекта
@@ -21,12 +24,16 @@
 
 ### Передача и получение параметров (далее будет показана работа с API с помощью Postman)
 1. Откройте Postman и в боковой панели выберите вкладку **Collections -> RESTful API Basics -> Get Data**
-2. В поле **Enter URL** вставьте путь до какого-либо эндпоинта (на примере это http://localhost:8080/api/calculate-frequency-desc)
+![](src/main/resources/static/images/collections-getdata.png)
+2. В поле **Enter URL** вставьте путь до какого-либо эндпоинта (на примере этот: http://localhost:8080/api/calculate-frequency-desc)
+![](src/main/resources/static/images/enterurl-keyvalue.png)
 3. Во вкладке Params нам необходимо передать параметры в виде пары **"ключ-значение"**. Ключем должен быть параметр **"key"**, а значение - это то, какую строку вы хотите передать ("на примере это "aaaaabcccc")
 4. После того, как вы введёте key-value пару, Postman автоматически создаст готовый URL для отправки GET-запроса.
 5. Нажмите **"Send"** и в случае, если вы всё сделали верно, API вернет нам тело ответа с кодом статуса "200". Тело ответа вы можете просмотреть внизу во вкладке **Body** в любом доступном формате (JSON, XML и т.п.)
+   ![](src/main/resources/static/images/response-body.png)
 
 ## Работа со Swagger
 **Swagger** - это фреймворк, позволяющий автоматически, на основании кода и аннотаций генерировать и обновлять интерактивную веб-документацию (Swagger UI) на REST API.
 Для целей документации, по минимуму методы контроллера помечаются аннотацией например так: **@ApiOperation("Получение списка всех пользователей")**
 Документацию по созданным API можно просматрировать по данной ссылке: **http://localhost:8080/swagger-ui/index.html**
+![](src/main/resources/static/images/swagger.png)

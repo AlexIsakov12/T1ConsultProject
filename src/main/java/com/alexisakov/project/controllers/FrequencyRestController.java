@@ -31,7 +31,7 @@ public class FrequencyRestController {
             @ApiResponse(responseCode = "500", description = "Внутренняя ошибка сервера")
     })
     @GetMapping("/calculate-frequency")
-    public ResponseEntity<Map<Character, Integer>> calculateFrequency(@RequestParam("value") @NotEmpty String value) {
+    public ResponseEntity<Map<Character, Integer>> calculateFrequency(@RequestParam("key") @NotEmpty String value) {
         return new ResponseEntity<>(frequencyService.calculateFrequency(value), HttpStatus.OK);
     }
 
@@ -42,7 +42,7 @@ public class FrequencyRestController {
             @ApiResponse(responseCode = "500", description = "Внутренняя ошибка сервера")
     })
     @GetMapping("/calculate-frequency-asc")
-    public ResponseEntity<Map<Character, Integer>> calculateFrequencyAscending(@RequestParam("value") @NotEmpty  String value) {
+    public ResponseEntity<Map<Character, Integer>> calculateFrequencyAscending(@RequestParam("key") @NotEmpty  String value) {
         return new ResponseEntity<>(frequencyService.calculateFrequencyAscending(value), HttpStatus.OK);
     }
 
@@ -53,7 +53,7 @@ public class FrequencyRestController {
             @ApiResponse(responseCode = "500", description = "Внутренняя ошибка сервера")
     })
     @GetMapping("/calculate-frequency-desc")
-    public ResponseEntity<Map<Character, Integer>> calculateFrequencyDescending(@RequestParam("value") @NotEmpty String value) {
+    public ResponseEntity<Map<Character, Integer>> calculateFrequencyDescending(@RequestParam("key") @NotEmpty String value) {
         return new ResponseEntity<>(frequencyService.calculateFrequencyDescending(value), HttpStatus.OK);
     }
 }
