@@ -2,13 +2,10 @@
 ## Работа с Git 
 ### Клонирование проекта
 1. На странице репозитория нажмите на зеленую кнопку **"Code"**
-   
 ![](src/main/resources/static/images/select-code.png)
 3. В выпадающем окне скопируйте ссылку на репозиторий
-   
 ![](src/main/resources/static/images/copy-link.png)
 4. Перейдите в **Intellij IDEA -> вкладка File -> New -> Get From Version Control** -> в поле URL вставьте скопированную вами ссылку на репозиторий и нажмите **"Clone"**.
-   
 ![](src/main/resources/static/images/get-from-version-control.png)
 
 ## Работа с проектом
